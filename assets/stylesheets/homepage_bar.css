@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'orbitron';
+    src: url('../fonts/orbitron-variablefont_wght-webfont.woff2') format('woff2'),
+        url('../fonts/orbitron-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'space_mono';
+    src: url('../fonts/spacemono-bold-webfont.woff2') format('woff2'),
+        url('../fonts/spacemono-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.homepage>.bar {
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+    width: 100%;
+    position: absolute;
+    top: 11vh;
+    background-color: #171717;
+    align-items: center;
+    row-gap: 5vh;
+    overflow: hidden;
+}
+
+.homepage>.bar>.heading {
+    position: relative;
+    top: 2vh;
+    height: 3vh;
+    font-family: 'space_mono', sans-serif;
+    font-size: 1.49em;
+    color: #8C8C8F;
+}
+
+.homepage>.bar>.dates {
+    display: flex;
+    column-gap: 8vw;
+    position: relative;
+    top: 0vh;
+    width: 50vw;
+}
+
+.homepage>.bar>.dates>.dates_item {
+    color: #565656;
+    font-family: 'space_mono', sans-serif;
+    font-size: 1.6em;
+    height: 4vh;
+    background-color: transparent;
+    border: 0;
+    width: 12vw;
+}
+
+.homepage>.bar>.dates>#first {
+    color: #04D368;
+    border-bottom: 0.5vh solid #04D368;
+}

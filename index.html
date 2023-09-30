@@ -1,12 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="Content-Security-Policy" content="frame-src https://docs.google.com;">
-    <title>Anicon 2.0 Survey</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="AAecZUXA5K4DbzvA5OYun0YYnXWv5bMzsgSe9YrcSXU" />
+  <link rel="stylesheet" href="assets/stylesheets/preloader.css" fetchpriority="high">
+  <link rel="stylesheet" href="assets/stylesheets/index.css" fetchpriority="high">
+  <link rel="stylesheet" href="assets/stylesheets/header.css" fetchpriority="high">
+  <link rel="stylesheet" href="assets/stylesheets/homepage_bar.css" fetchpriority="high">
+  <link rel="stylesheet" href="assets/stylesheets/event_page_bar.css">
+  <link rel="stylesheet" href="assets/stylesheets/homepage_bar_content.css" fetchpriority="high">
+  <link rel="stylesheet" href="assets/stylesheets/event_page_contents.css">
+  <title>Anicon</title>
 </head>
+
 <body>
-    <h1>Under construction...</h1>
+  <div class="preloader" id="preloader">
+    <div class="loader">
+      <img src="assets/images/preloader.webp" alt="preloader">
+    </div>
+  </div>
+  <header>
+    <div class="arrow" id="arrow" onclick="link('homepage');"></div>
+    <h1 class="heading"><span>AN</span>IC<span>O</span>N <span class="num">2</span></h1>
+    <div class="menu_icon" onclick="transition(this); ToggleNav();">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+  <div class="homepage" id="homepage">
+    <div class="bar">
+      <h1 class="heading">SCHEDULE</h1>
+      <div class="dates">
+        <button type="button" class="dates_item" id="first" onclick="tabs('first-content');">ARC1</button>
+        <button type="button" class="dates_item" id="second" onclick="tabs('second-content');">ARC2</button>
+        <button type="button" class="dates_item" id="third" onclick="tabs('third-content');"> ARC3</button>
+      </div>
+    </div>
+    <div class="bar_content">
+      <div class="dates_item_content" id="first-content">
+        <div class="display_content" onclick="link('opening_event');">
+          <div class="content_box"><span class="box_content">1.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Opening Ceremony</h1>
+            <h2>10:00AM - 11:30AM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-stockx-64.svg" alt="stockx" class="content_image" fetchpriority="high">
+          </div>
+        </div>
+        <div class="display_content" onclick="link('quiz_event');">
+          <div class="content_box"><span class="box_content">1.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Quiz</h1>
+            <h2>5:00AM - 6:30PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-mando-64.svg" alt="mando" class="content_image" fetchpriority="high">
+          </div>
+        </div>
+        <div class="display_content" onclick="link('japanese_event');">
+          <div class="content_box"><span class="box_content">1hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Japanese Events</h1>
+            <h2>6:30PM - 7:30PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="content_image"
+              fetchpriority="high">
+          </div>
+        </div>
+        <div class="display_content" onclick="link('evergoing_event_3');">
+          <div class="content_box"><span class="box_content">10.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Evergoing Events</h1>
+            <h2>9:00AM - 7:30PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/ico.png" alt="synth" class="content_image" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+      <div class="dates_item_content" id="second-content">
+        <div class="display_content" onclick="link('sketching_event')">
+          <div class="content_box"><span class="box_content">2.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Sketching</h1>
+            <h2>4:00AM - 6:30PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-mando-64.svg" alt="mando" class="content_image">
+          </div>
+        </div>
+        <div class="display_content" onclick="link('corps_event');">
+          <div class="content_box"><span class="box_content">0.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Survey Corps</h1>
+            <h2>6:30PM - 7:00PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-stockx-64.svg" alt="stockx" class="content_image" fetchpriority="high">
+          </div>
+        </div>
+        <div class="display_content" onclick="link('evergoing_event_4');">
+          <div class="content_box"><span class="box_content">10.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Evergoing Events</h1>
+            <h2>9:00AM - 7:30PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="content_image"
+              fetchpriority="high">
+          </div>
+        </div>
+      </div>
+      <div class="dates_item_content" id="third-content">
+        <div class="display_content" onclick="link('cosplay_event');">
+          <div class="content_box"><span class="box_content">2.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Cosplay</h1>
+            <h2>5:00PM - 7:30PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-stockx-64.svg" alt="stockx" class="content_image">
+          </div>
+        </div>
+        <div class="display_content" onclick="link('closing_event');">
+          <div class="content_box"><span class="box_content">0.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Closing Ceremony</h1>
+            <h2>7:30PM-8:00PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="content_image"
+              fetchpriority="high">
+          </div>
+        </div>
+        <div class="display_content" onclick="link('farewell_event');">
+          <div class="content_box"><span class="box_content">1hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Farewell</h1>
+            <h2>8:00AM - 9:00PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/icons8-mando-64.svg" alt="mando" class="content_image">
+          </div>
+        </div>
+        <div class="display_content" onclick="link('evergoing_event_5');">
+          <div class="content_box"><span class="box_content">10.5hs_</span></div>
+          <div class="content_bar"></div>
+          <div class="content">
+            <h1>Evergoing Events</h1>
+            <h2>9:00AM - 7:30PM</h2>
+            <div class="h_bar"></div>
+            <img src="assets/images/ico.png" alt="synth" class="content_image" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content_bar" id="c"></div>
+    <div class="content_box"><span class="box_content" id="p">Register</span></div>
+    <div class="image_box"><span class="box_content" id="pp">Register</span></div>
+    <div class="footer" id="footer">
+      <!-- <img src="./assets/images/harjas.webp" alt="harjas" class="harjas">
+      <h1 id="name" data-value="HARJAS"></h1>
+      <p class="post">Web Developer</p>
+      <a href="https://github.com/Harjas-Sidhu"><img src="./assets/images/github.png" alt="icon" class="icon"></a> -->
+    </div>
+  </div>
+  <div class="event_page" id="evergoing_event_3">
+    <div class="bar">
+      <h1 class="heading">03 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/merch.webp" alt="merch" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">10.5hs_</span></div>
+      <h1 class="title">EVERGOING EVENTS</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-stockx-64.svg" alt="stockx" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">ALL DAY EVENTS</h2>
+      <p class="body">
+        All day - Authentic Japanese Cuisine Experience
+        All day - Maid Café
+        All day - Artist Alley and Vendor Hall Exploration
+        All day - AMV (Anime Music Video) Edits
+        All day - Screenings of Latest Anime & Sponsor Clips.
+        All day - Photobooths with cardboard cut-outs for attraction.
+        All day - Gaming Centre
+        -Genshin Impact, Overwatch, Osu, Pokémon 3D, Fall guys, Tekken, Street Fighter, NFS, Scribble
+        -Arcade games from Game Zone
+        Sega Gun Game, Racing Game, Claw Game etc
+        All day - Memory board with Anime Rivalry/Roast your Anime.
+        All day – Kanji Art & Custom Posters
+
+      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="evergoing_event_4">
+    <div class="bar">
+      <h1 class="heading">04 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/merch.webp" alt="merch" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">10.5hs_</span></div>
+      <h1 class="title">EVERGOING EVENTS</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-stockx-64.svg" alt="stockx" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">ALL DAY EVENTS</h2>
+      <p class="body">
+        All day - Authentic Japanese Cuisine Experience
+        All day - Maid Café
+        All day - Artist Alley and Vendor Hall Exploration
+        All day - AMV (Anime Music Video) Edits
+        All day - Screenings of Latest Anime & Sponsor Clips.
+        All day - Photobooths with cardboard cut-outs for attraction.
+        All day - Gaming Centre
+        -Genshin Impact, Overwatch, Osu, Pokémon 3D, Fall guys, Tekken, Street Fighter, NFS, Scribble
+        -Arcade games from Game Zone
+        Sega Gun Game, Racing Game, Claw Game etc
+        All day - Memory board with Anime Rivalry/Roast your Anime.
+        All day – Kanji Art & Custom Posters
+      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="evergoing_event_5">
+    <div class="bar">
+      <h1 class="heading">05 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/merch.webp" alt="merch" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">10.5hs_</span></div>
+      <h1 class="title">EVERGOING EVENTS</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-stockx-64.svg" alt="stockx" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">ALL DAY EVENTS</h2>
+      <p class="body">
+        All day - Authentic Japanese Cuisine Experience
+        All day - Maid Café
+        All day - Artist Alley and Vendor Hall Exploration
+        All day - AMV (Anime Music Video) Edits
+        All day - Screenings of Latest Anime & Sponsor Clips.
+        All day - Photobooths with cardboard cut-outs for attraction.
+        All day - Gaming Centre
+        -Genshin Impact, Overwatch, Osu, Pokémon 3D, Fall guys, Tekken, Street Fighter, NFS, Scribble
+        -Arcade games from Game Zone
+        Sega Gun Game, Racing Game, Claw Game etc
+        All day - Memory board with Anime Rivalry/Roast your Anime.
+        All day – Kanji Art & Custom Posters
+      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="quiz_event">
+    <div class="bar">
+      <h1 class="heading">03 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/quiz.webp" alt="quiz" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">1.5hs_</span></div>
+      <h1 class="title">QUIZ</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-mando-64.svg" alt="mando" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">AN ANIME QUIZ</h2>
+      <p class="body">
+        Get ready to dive into the world of anime at our Anime Quiz Event! Challenge your knowledge, win prizes, and
+        share your passion for all things anime. Don't miss out!
+
+
+
+
+
+      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="cosplay_event">
+    <div class="bar">
+      <h1 class="heading">05 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/cosplay.webp" alt="cosplay" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">2.5hs_</span></div>
+      <h1 class="title">COSPLAY</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">A COSPLAY EVENT</h2>
+      <p class="body">
+        Step into the world of your favorite anime characters at our Anime Cosplay Event! Dress up, compete, and celebrate the art of cosplay with fellow fans. Don't miss this chance to become your anime heroes!      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="opening_event">
+    <div class="bar">
+      <h1 class="heading">03 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/cosplay.webp" alt="cosplay" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">1.5hs_</span></div>
+      <h1 class="title">OPENING EVENT</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">OPENING CEREMONY</h2>
+      <p class="body">
+        Guest Introductions
+        By Rashmi Mittal ma’am, Sourabh Lakhanpal Sir & Nitin Bhardwaj Sir.
+
+      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="farewell_event">
+    <div class="bar">
+      <h1 class="heading">05 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/cosplay.webp" alt="cosplay" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">1hs_</span></div>
+      <h1 class="title">FAREWELL EVERYONE!</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">FAREWELL TO ALL</h2>
+      <p class="body">
+       FAREWELL
+      </p>
+        <button type="submit" class="register" >REGISTER</button>
+
+    </div>
+  </div>
+  <div class="event_page" id="closing_event">
+    <div class="bar">
+      <h1 class="heading">05 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/cosplay.webp" alt="cosplay" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">0.5hs_</span></div>
+      <h1 class="title">CLOSING EVENT</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">CLOSING CEREMONY</h2>
+      <p class="body">
+        Closing Ceremony and  Felicitation Ceremony by Nitin Bhardwaj Sir
+      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="sketching_event">
+    <div class="bar">
+      <h1 class="heading">04 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/cosplay.webp" alt="cosplay" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">2.5hs_</span></div>
+      <h1 class="title">SKETCHING COMPETETION</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">A SKETCHING EVENT</h2>
+      <p class="body">
+        Unleash your creativity at our Anime Sketching Event! Join fellow artists and anime fans for a day of drawing your favorite characters and sharing your passion for anime. Don't miss out on this artistic celebration!
+      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="corps_event">
+    <div class="bar">
+      <h1 class="heading">04 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/cosplay.webp" alt="cosplay" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">0.5hs_</span></div>
+      <h1 class="title">SURVEY CORPS EVENT</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">A SURVEY CORPS PERFORMANCE</h2>
+      <p class="body">
+        AOT fans are you ready
+      </p>
+      <button type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <div class="event_page" id="japanese_event">
+    <div class="bar">
+      <h1 class="heading">03 OCTOBER</h1>
+    </div>
+    <div class="event_page_body">
+      <div class="overlay_1">
+        <img src="assets/images/cosplay.webp" alt="cosplay" class="image">
+      </div>
+      <div class="image_box"><span class="box_content">ALLDAY</span></div>
+      <h1 class="title">JAPANESE EVENT</h1>
+      <div class="overlay_2">
+        <img src="assets/images/icons8-super-mario-64.svg" alt="super-mario" class="title_img">
+      </div>
+      <div class="bar"></div>
+      <h2 class="sub_title">CULTURAL EVENTS</h2>
+      <p class="body">
+        -Japanese Food
+        -Japanese fair etc.
+
+
+
+      </p>
+      <button onclick="location.href='https://www.angularjswiki.com';"> 
+
+      <button onclick="location.href='https://tinyurl.com/KHOJ-ANICON';" type="submit" class="register">REGISTER</button>
+    </div>
+  </div>
+  <script src="assets/scripts/preloader.js" fetchpriority="high"></script>
+  <script src="assets/scripts/bar.js" async fetchpriority="high"></script>
+  <script src="assets/scripts/link.js" async></script>
+  <script src="assets/scripts/effect.js" fetchpriority="high"></script>
 </body>
+
 </html>
